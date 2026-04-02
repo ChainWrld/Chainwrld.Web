@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAINWRLD</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="assets/logo.png" alt="CHAINWRLD logo" />
+      </a>
+      <nav class="desktop-nav">
+        <a href="#shop">Shop</a>
+        <a href="#featured">Featured</a>
+        <a href="#about">About</a>
+      </nav>
+      <button id="cartToggle" class="cart-btn">Cart <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">CHAINWRLD • DROP 001</p>
+        <h1>Diamond Level Style</h1>
+        <p class="subcopy">Silver, gold, pendants, rings, men’s silver chains, and silver diamond earrings built for a clean luxury look.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn btn-light">Shop now</a>
+          <a href="#featured" class="btn btn-dark">View featured</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="featured" class="section">
+      <div class="container featured-grid">
+        <div class="featured-card">
+          <div class="featured-label">Featured product</div>
+          <img id="featuredImage" alt="" />
+        </div>
+        <div class="featured-info">
+          <div class="chip-row">
+            <span id="featuredTag" class="chip"></span>
+            <span id="featuredCategory" class="chip"></span>
+          </div>
+          <h2 id="featuredName"></h2>
+          <p id="featuredDescription" class="muted"></p>
+          <div class="featured-meta">
+            <div>
+              <div class="label">Material</div>
+              <div id="featuredMaterial"></div>
+            </div>
+            <div>
+              <div class="label">Price</div>
+              <div id="featuredPrice" class="price"></div>
+            </div>
+          </div>
+          <button id="featuredAdd" class="btn btn-light">Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">SHOP</p>
+            <h2>All products</h2>
+          </div>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-tight">
+      <div class="container about-card">
+        <p class="eyebrow">ABOUT CHAINWRLD</p>
+        <h2>Built to make the fit hit harder.</h2>
+        <p class="muted">No crosses. No religious symbols. Just clean silver and gold jewellery with a diamond luxury feel.</p>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your cart</h3>
+      <button id="closeCart" class="icon-btn">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div class="row"><span>Subtotal</span><strong id="subtotal">£0.00</strong></div>
+      <div class="row"><span>Shipping</span><strong id="shipping">£0.00</strong></div>
+      <div class="row total"><span>Total</span><strong id="total">£0.00</strong></div>
+
+      <form class="checkout-form" onsubmit="event.preventDefault(); alert('Demo checkout only. Connect Stripe or Shopify to take real payments.');">
+        <input type="text" placeholder="Full name" required />
+        <input type="email" placeholder="Email address" required />
+        <input type="text" placeholder="Shipping address" required />
+        <input type="text" placeholder="Card number" required />
+        <div class="form-row">
+          <input type="text" placeholder="MM/YY" required />
+          <input type="text" placeholder="CVC" required />
+        </div>
+        <button class="btn btn-light full" type="submit">Pay now</button>
+        <p class="note">Checkout UI is ready. Connect Stripe or Shopify for real payments.</p>
+      </form>
+    </div>
+  </aside>
+
+  <div id="scrim" class="scrim"></div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 CHAINWRLD</span>
+      <span>Silver • Gold • Chains • Pendants • Rings • Diamond Earrings</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
