@@ -24,3 +24,20 @@ npm run dev
 ## Notes
 - The checkout is only a demo UI.
 - No real Stripe payments are connected yet.
+
+## Deploy to Vercel
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. (Optional) Verify local production build:
+   ```bash
+   npm run build
+   ```
+3. Deploy:
+   ```bash
+   npx vercel --prod
+   ```
+
+Vercel will return a public URL after deployment.
